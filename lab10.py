@@ -50,10 +50,11 @@ def chatgpt_response(question):
         
     Returns: OpenAI response to query
     """
+    
+system_content = "You are a professional real estate investor and provide real estate investing advice and " \
+                 "expertise to individuals interested in building wealth through property investments in the United States. " \
+                 "You focus on topics such as rental income, property appreciation, tax advantages, and market analysis."
 
-    system_content = "You are a professional landscaper and provide landscaping advice and " \
-                     "expertise to residential home owners in United States Department of Agriculture (USDA) " \
-                     "Plant Hardiness Zone 8. "
 
     results = collection.query(
          query_texts=[question], # Chroma will embed the query and then perform a similarity search
